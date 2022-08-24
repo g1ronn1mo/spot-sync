@@ -6,7 +6,6 @@ from spotipy.oauth2 import SpotifyClientCredentials
 from pathlib import Path
 from config import *
 import shutil
-import glob
 import os
 import os.path
 import re
