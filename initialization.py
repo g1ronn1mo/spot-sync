@@ -1,12 +1,17 @@
-from config import *
+import os
+from dotenv import load_dotenv
+
+# Load environment variables from .env file
+load_dotenv()
+
+# Configuration from environment variables
+SYNC_FOLDER = os.getenv('SYNC_FOLDER', './playlists')
 
 def initialize_folder():
     pass
     # check if folder is empty 
     # if not ask if it should be created
     # if yes: create it
-
-SYNC_FOLDER 
 
 def ask_for_initials():
     pass

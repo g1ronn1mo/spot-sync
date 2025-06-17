@@ -1,0 +1,12 @@
+---
+description: 
+globs: 
+alwaysApply: false
+---
+to add packages use 
+
+```bash
+uv add <package>
+```
+
+

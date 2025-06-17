@@ -4,16 +4,26 @@ import spotipy
 from spotipy.oauth2 import SpotifyOAuth
 from spotipy.oauth2 import SpotifyClientCredentials
 from pathlib import Path
-from config import *
+from dotenv import load_dotenv
 import shutil
 import os
 import os.path
 import re
 
+# Load environment variables from .env file
+load_dotenv()
+
+# Configuration from environment variables
+CLIENT_ID = os.getenv('CLIENT_ID')
+CLIENT_SECRET = os.getenv('CLIENT_SECRET')
+REDIRECT_URI = os.getenv('REDIRECT_URI', 'http://localhost:8888/callback')
+USER = os.getenv('USER')
+SYNC_FOLDER = os.getenv('SYNC_FOLDER', './playlists')
+
 SCOPE= 'playlist-read-collaborative' 
 REMOVE = False
 
-EXISTING_PLAYLISTS = os.listdir(SYNC_FOLDER)
+EXISTING_PLAYLISTS = os.listdir(SYNC_FOLDER) if os.path.exists(SYNC_FOLDER) else []
 
 def authenticate():
     '''
