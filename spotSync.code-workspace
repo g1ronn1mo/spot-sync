@@ -5,5 +5,12 @@
 		},
 	
 	],
-	"settings": {}
+	"settings": {
+		"cSpell.words": [
+			"dotenv",
+			"spotdl",
+			"Spoti",
+			"spotipy"
+		]
+	}
 }

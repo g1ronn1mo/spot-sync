@@ -1,2 +1,4 @@
-spotipy==2.19.0
-python-dotenv==1.0.0
+spotipy
+spotdl
+PySide6
+browser-cookie3
